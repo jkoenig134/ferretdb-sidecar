@@ -1,0 +1,22 @@
+POST http://localhost:3000/todos HTTP/1.1
+content-type: application/json
+
+{
+    "title": "My first todo",
+    "description": "This is my first todo",
+    "done": false
+}
+
+###
+# @prompt id
+
+GET http://localhost:3000/todos/{{id}} HTTP/1.1
+
+###
+
+GET http://localhost:3000/todos HTTP/1.1
+
+###
+# @prompt id
+
+PUT http://localhost:3000/todos/{{id}}/toggle HTTP/1.1
